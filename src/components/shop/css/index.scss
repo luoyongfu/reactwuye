@@ -1,0 +1,319 @@
+.shop{
+  background-color: #fff;
+  .shop_img{
+    height:8.82rem;
+    img{
+      width: 100%;
+      height:100%;
+    }
+  }
+  .shop_par{
+    padding:.32rem;
+    .shop_title{
+      font-size: .4rem;
+    }
+
+    .shop_des{
+      font-size: .24rem;
+      margin-top:.1rem;
+      color: rgba(0,0,0,.54);
+      span{
+        color:#ff6700;
+      }
+    }
+
+    .shop_price{
+      margin-top:.2rem;
+      font-size: .48rem;
+      color:#ff6700;
+    }
+  }
+  .shop_con{
+    overflow: hidden;
+    margin-bottom:.2rem;
+    ul{
+      width: 200%;
+      height:1.4rem;
+      display: flex;
+      li + li{
+        border-left:1px solid #ddd;
+      }
+      li{
+        width:1.8rem;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        i{
+          width:.4rem;
+          height:.4rem;
+          font-size:.4rem;
+          font-weight: bold;
+        }
+        span{
+          font-size:.24rem;
+          margin-top:.05rem;
+        }
+      }
+    }
+  }
+  .shop_option{
+    height:12rem;
+    padding:0 .3rem;
+    .shop_dis{
+      height:1.7rem;
+      border:1px solid red;
+      border-radius: .1rem;
+      background-color:#FAFAFA;
+      border:1px solid #ddd;
+      overflow: hidden;
+      .shop_dis_top{
+        display: flex;
+        padding-left:.4rem;
+        align-items: center;
+        height:50%;
+        font-size:.24rem;
+        border-bottom:1px solid #ddd;
+        span + span{
+          margin-left:.5rem;
+          color:red;
+        }
+        i{
+          margin-left:1.8rem;
+          color:#888;
+        }
+      }
+      .shop_dis_bot{
+        display: flex;
+        padding-left:.4rem;
+        align-items: center;
+        height:50%;
+        font-size:.24rem;
+        div{
+          margin-left:.5rem;
+          display: flex;
+          span:first-child{
+            display: block;
+            width: .6rem;
+            border:1px solid red;
+            margin-right: .1rem;
+            color:red;
+            text-align: center;
+          }
+        }
+        i{
+          margin-left:1.05rem;
+          color:#888;
+        }
+      }
+    }
+    .shop_side{
+      margin-top:.2rem;
+      height:2.3rem;
+      border:1px solid #ddd;
+      background-color:#FAFAFA;
+      border-radius: .1rem;
+      i.right{
+        right: .3rem;
+      }
+      div{
+        height:33%;
+      }
+      & > div + div{
+        border-top:1px solid #ddd;
+      }
+      .shop_side_top{
+        position: relative;
+        display: flex;
+        font-size:.24rem;
+        padding-left:.4rem;
+        align-items: center;
+        div:nth-child(2){
+          margin-left:.5rem;
+        }
+        div:last-child{
+          margin-left:.95rem;
+          i{
+            color:#888;
+          }
+        }
+      }
+      .shop_side_center{
+        position: relative;
+        display: flex;
+        font-size:.24rem;
+        padding-left:.4rem;
+        align-items: center;
+        div:nth-child(2){
+          margin-left:.5rem;
+          span{
+            color:red;
+          }
+        }
+        div:last-child{
+          margin-left:2.5rem;
+          i{
+            color:#888;
+          }
+        }
+      }
+      .shop_side_bot{
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size:.24rem;
+        padding-left:.4rem;
+        color:#999;
+        div + div{
+          margin-left:.2rem;
+        }
+        div{
+          i{
+            font-size: .2rem;
+            color:red;
+          }
+          span{
+            margin-left:.05rem;
+          }
+        }
+        div:last-child{
+          margin-left:1.02rem;
+          i{
+            font-size: .32rem;
+            color:#888;
+          }
+        }
+      }
+    }
+    .shop_com{
+      height:5rem;
+      margin-top:.2rem;
+      background-color: #FAFAFA;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding:.3rem;
+      .shop_com_top{
+        height:.8rem;
+        font-size: .24rem;
+        padding-top:.05rem;
+        div{
+          float: left;
+          height:.7rem;
+          line-height: .7rem;
+        }
+        div:first-child{
+          width: .7rem;
+          border-radius: 50%;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height:100%;
+          }
+        }
+        div:nth-child(2){
+          padding:.05rem;
+          margin-left:.25rem;
+          p{
+            line-height: .3rem;
+          }
+          p:last-child{
+            color:#7E7E7E;
+          }
+        }
+        div:last-child{
+          float: right;
+          margin-right: .3rem;
+          color:#7E7E7E;
+          span{
+            margin-left:.1rem;
+          }
+        }
+      }
+      .shop_com_text{
+        font-size: .24rem;
+        margin: .12rem 0;
+      }
+      .shop_com_img{
+        height:1.3rem;
+        display: flex;
+        margin:.2rem 0;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        div{
+          width: 1.7rem;
+          height: 1.3rem;
+          border-radius: 10px;
+          overflow: hidden;
+          img{
+            width: 1.7rem;
+            height: 1.3rem;
+          }
+        }
+      }
+      .shop_com_prply{
+        font-size: .24rem;
+        height:.8rem;
+        line-height: .5rem;
+        span{
+          color:orangered;
+        }
+      }
+    }
+    .shop_com_more{
+      font-size: .3rem;
+      height:1rem;
+      line-height: 1rem;
+      text-align: center;
+      color: #4e72a5;
+      i{
+        font-size: .3rem;
+      }
+    }
+  }
+  .shop_botnav{
+    position: fixed;
+    padding-left:.3rem;
+    left:5%;
+    bottom: .3rem;
+    width: 90%;
+    height:1.1rem;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 .2rem #ddd;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    div{
+      display: flex;
+      font-size:.24rem;
+      flex-direction: column;
+      align-items: center;
+      i{
+        color:#000;
+        font-size: .4rem;
+      }
+    }
+    div:nth-child(2){
+      margin-left: .4rem;
+    }
+    div:last-child{
+      width:2.4rem;
+      height:.7rem;
+      margin-left:2rem;
+      line-height: .7rem;
+      text-align: center;
+      font-size:.3rem;
+      background-color: orangered;
+      border-radius: .32rem;
+      a{
+        display: block;
+        width: 100%;
+        height:100%;
+        color:#fff;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import Orders from "./order";
 import OrderNav from "./ordernav";
 import Spacing from "./spacing";
 import Go from "../arrow/go";
-import {Route, Switch} from "react-router-dom";
+// import {Route, Switch} from "react-router-dom";
 import Tabbar from "../tabbar";
 class My extends Component {
     render() {
@@ -65,7 +65,7 @@ class My extends Component {
                     </li>
                 </ul>
                 <div className={"s_bottom"}></div>
-
+                <Tabbar />
 
             </div>
         );

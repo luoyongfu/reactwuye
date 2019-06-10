@@ -10,6 +10,7 @@
     background-color: #F2F2F2;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
     .logo{
         width: .5rem;
         height: .32rem;
@@ -36,5 +37,9 @@
     .login{
         font-size:.4rem;
         color:red;
+        a{
+            display: block;
+            height:.2rem;
+        }
     }
 }

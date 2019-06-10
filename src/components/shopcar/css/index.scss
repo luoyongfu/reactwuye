@@ -1,0 +1,150 @@
+.shopcar{
+  font-size: .28rem;
+  .return{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    padding:.3rem;
+    height:1rem;
+    background-color: #f2f2f2;
+    font-size: .3rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    div:last-child{
+      i{
+        font-size: .4rem;
+      }
+    }
+  }
+  .shopcar_com{
+    margin-top: 1rem;
+    height: 4.7rem;
+    background-color: #fff;
+    padding:.2rem;
+    .shopcar_com_side{
+      position: relative;
+      display: flex;
+      height: 2.1rem;
+      align-items: center;
+      i{
+        color:red;
+      }
+      .shopcar_com_side_con{
+        display: flex;
+        margin-left:.2rem;
+        .shopcar_com_side_img{
+          width:2.1rem ;
+          height:2.1rem;
+          border:1px solid #f2f2f2;
+          overflow: hidden;
+          img{
+            height:100%;
+          }
+        }
+        .shopcar_com_side_text{
+          width: 3.5rem;
+          margin-left:.2rem;
+          p{
+            margin-bottom:.1rem;
+          }
+          div{
+            display: flex;
+            width: 1.9rem;
+            height: .7rem;
+            margin-top:.15rem;
+            border:1px solid #f2f2f2;
+            span{
+              flex: 1;
+              height:100%;
+              text-align: center;
+              font-size: .3rem;
+              line-height: .7rem;
+            }
+            span:first-child{
+              background-color: #FAFAFA;
+            }
+            span:last-child{
+              background-color: #FAFAFA;
+            }
+          }
+        }
+      }
+      .icon{
+        position: absolute;
+        right: 0;
+        bottom:0;
+        i{
+          color:#C2C2C2;
+        }
+      }
+    }
+    .shopcar_com_gua{
+      height:1.9rem;
+      margin-top:.25rem;
+
+      div{
+        height:.85rem;
+        border-radius: 5px;
+        background-color: #F6F6F6;
+      }
+      .shopcar_com_gua_index{
+        display: flex;
+        padding: .14rem .2rem;
+        margin-bottom:.2rem;
+        img{
+          width: .5rem;
+          height:.5rem;
+        }
+        p{
+          height:.5rem;
+          margin-left:.1rem;
+          line-height: .5rem;
+        }
+        p:last-child{
+          color:orangered;
+          margin-left:3.3rem;
+        }
+      }
+    }
+  }
+  .shopcar_set{
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    height:1.1rem;
+    background-color: #fff;
+    box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    div{
+      display: flex;
+      flex: 1;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p{
+        color:#999;
+        span{
+          font-size:.4rem;
+          color:orangered;
+        }
+      }
+    }
+    .shopcar_set_shop{
+      background-color:#F4F4F4;
+      p{
+        color:#000;
+      }
+    }
+    .shopcar_set_pay{
+      background-color: #FF6700;
+      p{
+        color:#fff;
+      }
+    }
+  }
+}

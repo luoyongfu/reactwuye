@@ -1,0 +1,21 @@
+.banner{
+  height:3.75rem;
+  background: #ddd;
+  overflow: hidden;
+  ul{
+    display: flex;
+    width:300%;
+    li{
+      width: 7.5rem;
+      height:100%;
+      a{
+        display: block;
+        height:100%;
+        img{
+          width: 100%;
+          height:100%;
+        }
+      }
+    }
+  }
+}

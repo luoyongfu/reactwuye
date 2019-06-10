@@ -1,0 +1,51 @@
+.goods{
+  //height:165rem;
+  margin-bottom:1.2rem;
+  background-color: #fff;
+  margin-top:.2rem;
+  ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a{
+      display: block;
+    }
+    li{
+      width:49.6%;
+      height:5.3rem;
+      //border:1px solid red;
+      //margin-bottom:.2rem;
+      .goods_shop{
+        height:3.75rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .info{
+        padding:.2rem .27rem;
+        .goods_title{
+          font-size: .28rem;
+          color:rgba(0,0,0,.87);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .goods_des{
+          margin-top:.06rem;
+          font-size: .22rem;
+          line-height:.3rem;
+          color:rgba(0,0,0,.54);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .goods_price{
+          font-size: .28rem;
+          color:#ea625b;
+        }
+      }
+
+    }
+  }
+}
