@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import './css/index.scss'
-// import {connect} from 'react-redux'
-// import {addCart} from '../../actions/cart'
-//
-// @connect(
-//     state=>({wuye:state}),
-//     {addCart}
-// )
+import {connect} from 'react-redux'
+import {addCart} from '../../actions/cart'
+
+@connect(
+    state=>({shop:state}),
+    {addCart}
+)
+
 class Shop extends Component {
     state = {
-        data:{}
+        data:{},
+        num:0,
+        id:0
     }
     componentDidMount(){
         let id = this.props.match.params.shopid
-        console.log(id)
+        // console.log(id)
         fetch('http://47.100.98.54:9020/api/buygoods/'+ id)
             .then((res)=>{
                 return res.json()
@@ -22,13 +25,46 @@ class Shop extends Component {
             .then((res)=>{
                 // console.log(res)
                 this.setState({
-                    data:res
+                    data:res,
+                    id
                 })
             })
-        console.log(this.props)
     }
+    // 减少商品
+    reduceGoods = () =>{
+        let num = this.state.num
+        num = num ? num-1 : num
+        this.setState({
+            num
+        })
+    }
+    // 增加商品
+    addGoods = () =>{
+        let num = this.state.num
+        // console.log(n)
+        num++
+        this.setState({
+            num
+        })
+    }
+
+    //加入购物车提交到redux
+    submitRedux = () => {
+        let {num,id} = this.state
+        let {addCart} = this.props
+        num && (
+            // console.log('提交到redux')
+            addCart({
+                id,
+                num
+            })
+        )
+    }
+
     render() {
-        let {picurl,title,des,symbol,shopid,price,id} = this.state.data
+        // console.log(this.props)
+        let {num,data} = this.state
+        let {picurl,title,des,symbol,price} = data
         return (
             <div className={'shop'}>
                 <div className={'shop_img'}>
@@ -42,7 +78,14 @@ class Shop extends Component {
                         <span>{des}</span>
                         与小米9相同的超级夜景算法 / 2400万旗舰自拍 / Dual PD 双核对焦 / 潮流镜面渐变色 / 7.5mm超薄机身 / 6.26"小刘海全面屏 / 骁龙660AIE处理器
                     </p>
-                    <p className={'shop_price'}>{symbol}{price}</p>
+                    <div className={'shop_price'}>
+                        {symbol}{price}
+                        <div>
+                            <span onClick={this.reduceGoods}>-</span>
+                            <span>{num}</span>
+                            <span onClick={this.addGoods}>+</span>
+                        </div>
+                    </div>
                 </div>
                 <div className={'shop_con'}>
                     <ul>
@@ -153,9 +196,7 @@ class Shop extends Component {
                         <span>购物车</span>
                     </div>
                     <div>
-                        <a href="">
-                            <p>加入购物车</p>
-                        </a>
+                        <p  onClick={this.submitRedux}>加入购物车</p>
                     </div>
                 </div>
             </div>

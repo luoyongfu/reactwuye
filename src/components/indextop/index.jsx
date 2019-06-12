@@ -7,16 +7,16 @@ class Head extends Component {
         name:'wuye小米商城'
     }
     componentDidMount(){
-        fetch('http://47.100.98.54:9020/api/name')
-            .then(res=>res.json())
-            .then((data) => {
-                if(data.status === 200){
-                    this.setState({
-                        name:data.name
-                    })
-                }
-                // console.log(data)
-            })
+        // fetch('http://47.100.98.54:9020/api/name')
+        //     .then(res=>res.json())
+        //     .then((data) => {
+        //         if(data.status === 200){
+        //             this.setState({
+        //                 name:data.name
+        //             })
+        //         }
+        //         // console.log(data)
+        //     })
 
     }
     render() {

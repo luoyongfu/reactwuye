@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Switch
 } from 'react-router-dom'
@@ -17,17 +17,24 @@ import My from './components/my/index.jsx'
 import Home from './components/home/index'
 import NotFound from './components/notfound/index'
 import Shop from "./components/shop";
+import Map from "./components/map";
+// 页面跳转时显示组件顶部
+import ScrollTop from './components/scrolltop/index'
 class App extends Component{
+
     render() {
         return (
-            <Router>
-                <Switch>
-                    <Route exact path={'/'} component={Home} />
-                    <Route path={'/my'} component={My} />
-                    <Route path={'/shopcar'} component={Shopcar}/>
-                    <Route path={'/shop/:shopid'} component={Shop}/>
-                    <Route component={NotFound} />
-                </Switch>
+            <Router basename={'reactwuye'}>
+                <ScrollTop>
+                    <Switch>
+                        <Route exact path={'/'} component={Home} />
+                        <Route path={'/map'} component={Map}/>
+                        <Route path={'/my'} component={My} />
+                        <Route path={'/shopcar'} component={Shopcar}/>
+                        <Route path={'/shop/:shopid'} component={Shop}/>
+                        <Route component={NotFound} />
+                    </Switch>
+                </ScrollTop>
             </Router>
         );
     }

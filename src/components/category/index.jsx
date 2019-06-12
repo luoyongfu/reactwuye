@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './css/index.scss'
 class Category extends Component {
     state = {
@@ -24,9 +25,9 @@ class Category extends Component {
                     data.length > 0 && (
                         data.map((item,index) => {
                             return (
-                                <a href="/" key={item.id}>
+                                <Link to={`/shop/${item.shopid}`} key={item.id}>
                                     <img src={item.picurl} alt={item.alt}/>
-                                </a>
+                                </Link>
                             )
                         })
                     )

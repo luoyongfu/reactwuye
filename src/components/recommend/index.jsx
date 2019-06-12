@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './css/index.scss'
 class Romd extends Component {
     state = {
@@ -22,7 +23,7 @@ class Romd extends Component {
             <div className={'romd'}>
                 {
                     data.shopid && (
-                        <a href="/"><img src={data.picurl} alt=""/></a>
+                        <Link to={`/shop/${data.shopid}`}><img src={data.picurl} alt={data.title}/></Link>
                     )
                 }
 

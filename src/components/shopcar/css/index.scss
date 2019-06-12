@@ -1,5 +1,7 @@
 .shopcar{
   font-size: .28rem;
+  margin-top: 1rem;
+  margin-bottom: 1.1rem;
   .return{
     position: fixed;
     top:0;
@@ -19,8 +21,24 @@
       }
     }
   }
+  .shop_site{
+    height:1rem;
+    padding:.2rem;
+    display: flex;
+    background-color: #fff;
+    border-bottom:1px dashed #ccc;
+    p{
+      line-height: .6rem;
+    }
+    p:first-child{
+      width: calc( 100% - 2rem );
+      margin-right: .8rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+  }
   .shopcar_com{
-    margin-top: 1rem;
     height: 4.7rem;
     background-color: #fff;
     padding:.2rem;
@@ -45,9 +63,9 @@
           }
         }
         .shopcar_com_side_text{
-          width: 3.5rem;
+          width: 4rem;
           margin-left:.2rem;
-          p{
+          p + p{
             margin-bottom:.1rem;
           }
           div{

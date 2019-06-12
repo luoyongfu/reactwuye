@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './css/index.scss'
 class Conference extends Component {
     state = {
@@ -22,7 +23,7 @@ class Conference extends Component {
             <div className={'conference'}>
                 {
                     data.shopid && (
-                        <a href="/"><img src={data.picurl} alt={data.alt}/></a>
+                        <Link to={`/shop/${data.shopid}`}><img src={data.picurl} alt={data.alt}/></Link>
                     )
                 }
                 {/*<a href="/"><img src={require('./img/conference.jpg')} alt=""/></a>*/}

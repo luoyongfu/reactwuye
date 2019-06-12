@@ -17,3 +17,10 @@ export function getGoodsNum(data){
         data
     }
 }
+
+export function getUserInfo(map){
+    return {
+        type:'GET_USER_INFO',
+        map
+    }
+}

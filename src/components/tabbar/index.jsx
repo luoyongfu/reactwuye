@@ -15,14 +15,15 @@ class Tabbar extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/category'} >
-                            <i className={'iconfont icon-icon'}></i>
-                            <span>分类</span>
+                        <NavLink to={'/map'} >
+                            <i className={'iconfont icon-ditu'}></i>
+                            <span>定位</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to={'/shopcar'}>
-                            <i className={'iconfont icon-icon1'}></i>
+                            <i className={'iconfont icon-icon1'}>
+                            </i>
                             <span>购物车</span>
                         </NavLink>
                     </li>

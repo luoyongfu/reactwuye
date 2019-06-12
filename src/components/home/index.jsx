@@ -6,9 +6,11 @@ import Romd from "../recommend";
 import Conference from "../conference";
 import Goods from "../goods";
 import Tabbar from "../tabbar";
-import Shop from "../shop";
-import Shopcar from "../shopcar";
-import My from "../my";
+
+import LazyLoad from 'react-lazyload';
+// import Shop from "../shop";
+// import Shopcar from "../shopcar";
+// import My from "../my";
 
 class Home extends Component {
     render() {
@@ -19,7 +21,9 @@ class Home extends Component {
                 <Category />
                 <Romd />
                 <Conference />
-                <Goods />
+                <LazyLoad height={200}>
+                    <Goods />
+                </LazyLoad>
                 <Tabbar />
                 {/*<Shop />*/}
                 {/*<Shopcar />*/}
